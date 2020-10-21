@@ -1,9 +1,12 @@
 html {
   box-sizing: border-box;
-  background: #ffc600;
+  background: #14121b;
+  background-image: url('./images/b.jpeg');
+  background-repeat: no-repeat;
   font-family: 'helvetica neue';
   font-size: 20px;
   font-weight: 200;
+  color: #00FF00;
 }
 
 *, *:before, *:after {
@@ -33,6 +36,7 @@ input.search {
   border-radius: 5px;
   font-size: 40px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+  color: #00FF00;
 }
 
 .suggestions {
@@ -70,5 +74,6 @@ span.population {
 }
 
 .hl {
-  background: #ffc600;
+  background: #7d8ea9;
 }
+
