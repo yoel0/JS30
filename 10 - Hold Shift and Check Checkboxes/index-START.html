@@ -3,13 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Hold Shift to Check Multiple Checkboxes</title>
+  <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
   <style>
 
     html {
       font-family: sans-serif;
-      background: #ffc600;
+      background: #000000;
+      color: #EB6123;
+      font-weight: 900;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .spooky {
+      font-family: 'Aladin', serif;
+      align-content: center;
     }
 
     .inbox {
@@ -17,13 +30,13 @@
       margin: 50px auto;
       background: white;
       border-radius: 5px;
-      box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+      box-shadow: 10px 10px 0 rgba(235, 97, 35, 0.5);
     }
 
     .item {
       display: flex;
       align-items: center;
-      border-bottom: 1px solid #F1F1F1;
+      border-bottom: 1px solid #EB6123;
     }
 
     .item:last-child {
@@ -31,7 +44,7 @@
     }
 
     input:checked + p {
-      background: #F9F9F9;
+      color: #EB6123;
       text-decoration: line-through;
     }
 
@@ -44,10 +57,10 @@
       padding: 20px;
       transition: background 0.2s;
       flex: 1;
-      font-family:'helvetica neue';
+      font-family:'Aladin';
       font-size: 20px;
       font-weight: 200;
-      border-left: 1px solid #D1E2FF;
+      border-left: 1px solid #EB6123;
     }
   </style>
    <!--
@@ -56,46 +69,88 @@
    When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
 
   -->
+  <div class="container">
+    <h1 class="spooky">is it halloWeen yet?</h1>
+  </div>
+
   <div class="inbox">
     <div class="item">
       <input type="checkbox">
       <p>This is an inbox layout.</p>
+      <label><img src="https://cdn.lowgif.com/full/fbf7ed051c6477a8-dancing-panda-monster-animation.gif" width="50px" height="50px" /></label>
     </div>
     <div class="item">
       <input type="checkbox">
       <p>Check one item</p>
+      <label><img src="https://freepikpsd.com/wp-content/uploads/2019/10/cute-gif-png-Png-Transparent-Images.gif" width="50px" height="50px" /></label>
     </div>
     <div class="item">
       <input type="checkbox">
       <p>Hold down your Shift key</p>
+      <label><img src="https://media1.popsugar-assets.com/files/thumbor/HvFQsa6RWL9xMRSAM_JY4qoFpRw/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2019/10/21/643/n/46781279/8c671df5b74b41ab_e1fd605b4f66dbd3e2e2221c8f751bcf-sticker/i/Happy-Pumpkin-Trick-or-Treater.gif" width="50px" height="50px" /></label>
     </div>
     <div class="item">
       <input type="checkbox">
       <p>Check a lower item</p>
+      <label><img src="https://thumbs.gfycat.com/DearestSevereBlueshark-max-1mb.gif" width="50px" height="50px" /></label>
     </div>
     <div class="item">
       <input type="checkbox">
       <p>Everything in between should also be set to checked</p>
+      <label><img src="https://thumbs.gfycat.com/BigSaltyCardinal-max-1mb.gif" width="50px" height="50px" /></label>
     </div>
     <div class="item">
       <input type="checkbox">
       <p>Try to do it without any libraries</p>
+      <label><img src="https://pic.funnygifsbox.com/uploads/2019/10/funnygifsbox.com-2019-10-06-05-55-15-35.gif" width="50px" height="50px" /></label>
     </div>
     <div class="item">
       <input type="checkbox">
       <p>Just regular JavaScript</p>
+      <label><img src="https://lh3.googleusercontent.com/proxy/yVAXL7xAlH4Vv26xncLcKd_UFLPOJIKh-Q6UIRmXcQrdoPl4Qveaz5Y3EULQKGFMjUTBc7TWW8ENoLgWKh_u" width="50px" height="50px" /></label>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Good Luck!</p>
+      <p>Good Luck!, <= Hold my purse, fam.</p>
+      <label><img src="https://data.whicdn.com/images/174732689/original.gif" width="50px" height="50px" /></label>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Don't forget to tweet your result!</p>
+      <p>Don't forget to <strike style="font-size: 45px;">tweet</strike> your result! *Post your result to linkedIn</p>
+      <label><img src="https://thumbs.gfycat.com/ColdGenuineAnemoneshrimp-size_restricted.gif" width="50px" height="50px" /></label>
     </div>
   </div>
 
 <script>
+  const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+  
+  let lastChecked;
+
+  function handleCheck(e) {
+    // Check if they had the shift key down
+    // AND check that they are checking it
+    let inBetween = false;
+    if (e.shiftKey && this.checked) {
+      // go ahead and do what we please
+      // loop over every single checkbox
+      checkboxes.forEach(checkbox => {
+        console.log(checkbox);
+        if(checkbox === this || checkbox === lastChecked) {
+          inBetween = !inBetween;
+          console.log('Starting to check them inbetween!');
+        }
+
+        if(inBetween) {
+          checkbox.checked = true;
+        }
+      });
+    }
+
+
+    lastChecked = this;
+  }
+
+  checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
 </script>
 </body>
 </html>
