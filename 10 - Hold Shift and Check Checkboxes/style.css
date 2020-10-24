@@ -1,0 +1,53 @@
+html {
+  font-family: sans-serif;
+  background: #000000;
+  color: #EB6123;
+  font-weight: 900;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spooky {
+  font-family: 'Aladin', serif;
+  align-content: center;
+}
+
+.inbox {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(235, 97, 35, 0.5);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #EB6123;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked + p {
+  color: #EB6123;
+  text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  transition: background 0.2s;
+  flex: 1;
+  font-family:'Aladin';
+  font-size: 20px;
+  font-weight: 200;
+  border-left: 1px solid #EB6123;
+}

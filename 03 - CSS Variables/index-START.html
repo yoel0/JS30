@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Scoped CSS Variables and JS</title>
   <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <h2>DJ spin dat <span class='hl'>JS</span> Variable</h2>
@@ -21,55 +22,7 @@
 
   <img src="https://www.testbytes.net/wp-content/uploads/2019/06/Untitled-56.png">
 
-  <style>
-    :root {
-      --base: #FFDE7F;
-      --spacing: 10px;
-      --blur: 10px;
-    }
-
-    img {
-      padding: var(--spacing);
-      background: var(--base);
-      filter: blur(var(--blur));
-    }
-
-    .hl {
-      color: var(--base);
-    }
-    /*
-      misc styles, nothing to do with CSS variables
-    */
-
-    body {
-      text-align: center;
-      background: #fff4f2;
-      color: peachpuff;
-      font-family: 'Sedgwick Ave Display', sans-serif;
-      font-weight: 100;
-      font-size: 50px;
-    }
-
-    .controls {
-      margin-bottom: 50px;
-    }
-
-    input {
-      width: 100px;
-    }
-  </style>
-
-  <script>
-    const inputs = document.querySelectorAll('.controls input');
-
-    function handleUpdate() {
-      const suffix = this.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-    }
-
-    inputs.forEach(input => input.addEventListener('change', handleUpdate));
-    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
-  </script>
+  <script src='./script.js'></script>
 
 </body>
 </html>
