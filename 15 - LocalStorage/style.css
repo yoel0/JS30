@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: url("oh-la-la.jpeg") center no-repeat;
+  background: url("./assets/fisherbg.jpg") center no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -67,7 +67,7 @@ h2 {
 }
 
 .plates input:checked + label:before {
-  content: "🌮";
+  content: "🎣";
 }
 
 .add-items {
