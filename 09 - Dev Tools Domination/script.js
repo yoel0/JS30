@@ -16,7 +16,7 @@ console.log('Hello, I am a %s Engineer!', '👨‍💻')
 // console.log(`Hello I am ${var}`);
 
 // Styled
-console.log('%c I am some big text', 'font-size: 50px; background: red; text-shadow: 10px 10px 0 blue;');
+console.log('%c I am Tess The Best', 'font-size: 50px; background: red; text-shadow: 10px 10px 0 blue;');
 
 // warning!
 console.warn('Oh no no no');
