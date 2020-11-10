@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Video Speed Scrubber</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Video Speed Scrubber</title>
+		<link rel="stylesheet" href="./style.css" />
+		<script src="https://unpkg.com/scrollreveal"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="headline">Like a sail in a storm...</h1>
+			<p class="tagline">
+				Without you.. I feel
+				<span class="punchline">Torn.</span>
+			</p>
+		</div>
+		<div class="wrapper">
+			<video
+				class="flex"
+				width="765"
+				height="430"
+				src="./assets/withoutyou.mp4"
+				loop
+				controls
+			></video>
+			<div class="speed">
+				<div class="speed-bar">1×</div>
+			</div>
+		</div>
 
-  <div class="wrapper">
-    <video class="flex" width="765" height="430" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop controls></video>
-    <div class="speed">
-      <div class="speed-bar">1×</div>
-    </div>
-  </div>
-
-<script>
-</script>
-</body>
+		<script src='./script.js'></script>
+	</body>
 </html>

@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #4C4C4C url('https://unsplash.it/1500/900?image=1021');
+  background: #4C4C4C url('https://eskipaper.com/images/hipster-wallpaper-4.jpg');
   background-size: cover;
   font-family: sans-serif;
 }
@@ -39,4 +39,22 @@ video {
   padding: 2px;
   color: white;
   height: 16.3%;
+}
+
+.container {
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.headline {
+  color: skyblue;
+}
+
+.tagline {
+  color: lightcyan;
+  font-size: 25px;
+}
+
+.punchline {
+  color: lightseagreen;
+  font-size: 50px;
 }
