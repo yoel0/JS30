@@ -1,9 +1,10 @@
 html {
   box-sizing: border-box;
   font-size: 10px;
-  background: #8E24AA;
-  background: linear-gradient(45deg,  #42a5f5 0%,#478ed1 50%,#0d47a1 100%);
+  background: #FFFFFF;
+  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);;
 }
+
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -45,7 +46,7 @@ body {
 .timer__controls input {
   flex: 1;
   border: 0;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .timer__button {
@@ -79,4 +80,8 @@ body {
 .display__end-time {
   font-size: 4rem;
   color: white;
+}
+
+.gif {
+  background-color: #FFFFFF;
 }
